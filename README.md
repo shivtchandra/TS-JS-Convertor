@@ -2,29 +2,31 @@
 
 A powerful, AI-driven tool that converts TypeScript files to clean JavaScript using a local Llama 3 model via Ollama. It features a sleek, modern dark-themed UI built with Streamlit.
 
-### ✨ Features
+-----
+
+## Features
 
   - **Batch Conversion:** Upload and convert multiple TypeScript files at once.
-  - **Snippet Conversion:** Convert individual TypeScript code snippets in real-time.
-  - **Premium Dark UI:** Sleek, modern interface with glassmorphism effects.
-  - **AI-Powered:** Uses the **Llama 3** model for intelligent code conversion.
+  - **Snippet Conversion:** Convert individual TypeScript code snippets in real time.
+  - **Premium Dark UI:** A sleek, modern interface with glassmorphism effects.
+  - **AI-Powered:** Uses the Llama 3 model for intelligent code conversion.
   - **Easy Export:** Download converted files as a ZIP archive.
-  - **Privacy-First:** All processing happens locally - no cloud dependencies.
+  - **Privacy-First:** All processing happens locally, with no cloud dependencies.
   - **Fast Processing:** Efficient batch processing with progress tracking.
 
 -----
 
-## 🚀 Prerequisites
+## Prerequisites
 
 Before running this application, ensure you have:
 
-  - **Python 3.8+** installed on your system.
-  - **Ollama** installed and running locally.
-  - **Llama 3 model** downloaded via Ollama.
+  - Python 3.8+ installed on your system
+  - Ollama installed and running locally
+  - Llama 3 model downloaded via Ollama
 
 ### Installing Ollama
 
-Visit [Ollama's official website](https://ollama.com/) and follow the installation instructions for your operating system.
+Visit Ollama's official website and follow the installation instructions for your operating system.
 
 ### Setting up Llama 3
 
@@ -42,7 +44,7 @@ ollama serve
 
 -----
 
-## 📥 Installation
+## Installation
 
 Clone the repository:
 
@@ -55,7 +57,7 @@ Create a virtual environment (recommended):
 
 ```bash
 python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 Install dependencies:
@@ -66,19 +68,21 @@ pip install -r requirements.txt
 
 -----
 
-## 💻 Usage
+## Usage
 
-1.  Start the Ollama server (if not already running):
-    ```bash
-    ollama serve
-    ```
-2.  Run the Streamlit application:
-    ```bash
-    streamlit run app.py
-    ```
-3.  Open your browser and navigate to `http://localhost:8501`.
+Start the Ollama server (if not already running):
 
------
+```bash
+ollama serve
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Open your browser and navigate to `http://localhost:8501`.
 
 ### How to Use
 
@@ -86,7 +90,7 @@ pip install -r requirements.txt
 
 1.  Navigate to the "Convert Folder" tab.
 2.  Click "Browse files" and select your `.ts` or `.tsx` files.
-3.  Click "Convert Files to JavaScript."
+3.  Click "Convert Files to JavaScript".
 4.  Monitor the progress bar during conversion.
 5.  Download the converted files as a ZIP archive.
 
@@ -94,19 +98,19 @@ pip install -r requirements.txt
 
 1.  Navigate to the "Convert Single Snippet" tab.
 2.  Paste your TypeScript code in the left panel.
-3.  Click "Convert Snippet."
+3.  Click "Convert Snippet".
 4.  View the converted JavaScript code in the right panel.
 
 -----
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ai-ts-js-converter/
-├── app.py              # Main Streamlit application
-├── requirements.txt    # Python dependencies
-├── README.md           # Project documentation
-└── assets/             # Static assets (if any)
+├── app.py                  # Main Streamlit application
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+└── assets/                 # Static assets (if any)
 ```
 
 ### Dependencies
@@ -119,7 +123,7 @@ ai-ts-js-converter/
 
 -----
 
-## 🎨 UI Features
+## UI Features
 
 The application features a premium dark theme with:
 
@@ -132,7 +136,7 @@ The application features a premium dark theme with:
 
 -----
 
-## ⚙️ Configuration
+## Configuration
 
 ### Ollama API Settings
 
@@ -156,9 +160,9 @@ payload = {
 
 -----
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome\! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome. Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Development Setup
 
@@ -171,31 +175,31 @@ Contributions are welcome\! Please feel free to submit a Pull Request. For major
 
 -----
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
-  - **"Error connecting to Ollama"**
+#### "Error connecting to Ollama"
 
-      - Ensure Ollama is installed and running (`ollama serve`).
-      - Check if the Llama 3 model is downloaded (`ollama list`).
-      - Verify the API URL is correct (default: `http://localhost:11434`).
+  - Ensure Ollama is installed and running (`ollama serve`).
+  - Check if the Llama 3 model is downloaded (`ollama list`).
+  - Verify the API URL is correct (default: `http://localhost:11434`).
 
-  - **"Failed to decode JSON from Ollama response"**
+#### "Failed to decode JSON from Ollama response"
 
-      - This may indicate an issue with the Ollama model.
-      - Try restarting the Ollama server.
-      - Ensure you're using a compatible model.
+  - This may indicate an issue with the Ollama model.
+  - Try restarting the Ollama server.
+  - Ensure you are using a compatible model.
 
-  - **Files not converting properly**
+#### "Files not converting properly"
 
-      - Make sure uploaded files are valid TypeScript (`.ts` or `.tsx`).
-      - Check that the files contain valid TypeScript syntax.
-      - Large files may take longer to process.
+  - Make sure uploaded files are valid TypeScript (`.ts` or `.tsx`).
+  - Check that the files contain valid TypeScript syntax.
+  - Large files may take longer to process.
 
 -----
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
   - Support for additional file types (`.d.ts`, `.vue`, etc.).
   - Custom conversion rules and preferences.
@@ -207,7 +211,7 @@ Contributions are welcome\! Please feel free to submit a Pull Request. For major
 
 -----
 
-## ❓ Support
+## Support
 
 If you encounter any issues or have questions:
 
@@ -217,13 +221,9 @@ If you encounter any issues or have questions:
 
 -----
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-  - **Streamlit** for the amazing web framework.
-  - **Ollama** for local AI model serving.
-  - **Meta** for the Llama 3 model.
+  - Streamlit for the web application framework.
+  - Ollama for local AI model serving.
+  - Meta for the Llama 3 model.
   - The open-source community for inspiration and resources.
-
-Made with ❤️ and powered by AI
-
-⭐ **Star this repo if you found it helpful\!**
