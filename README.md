@@ -1,232 +1,229 @@
 # AI TypeScript to JavaScript Converter
 
-A powerful, AI-driven tool that converts **TypeScript** files to clean **JavaScript** using a local **Llama 3** model via **Ollama**.  
-Features a sleek, modern **dark-themed UI** built with **Streamlit**.
+A powerful, AI-driven tool that converts TypeScript files to clean JavaScript using a local Llama 3 model via Ollama. It features a sleek, modern dark-themed UI built with Streamlit.
 
----
+### ✨ Features
 
-## ✨ Features
-- **Batch Conversion** – Upload and convert multiple TypeScript files at once.
-- **Snippet Conversion** – Convert individual TypeScript code snippets in real-time.
-- **Premium Dark UI** – Sleek, modern interface with **glassmorphism effects**.
-- **AI-Powered** – Uses **Llama 3** model for intelligent code conversion.
-- **Easy Export** – Download converted files as a ZIP archive.
-- **Privacy-First** – All processing happens locally, no cloud dependencies.
-- **Fast Processing** – Efficient batch processing with progress tracking.
+  - **Batch Conversion:** Upload and convert multiple TypeScript files at once.
+  - **Snippet Conversion:** Convert individual TypeScript code snippets in real-time.
+  - **Premium Dark UI:** Sleek, modern interface with glassmorphism effects.
+  - **AI-Powered:** Uses the **Llama 3** model for intelligent code conversion.
+  - **Easy Export:** Download converted files as a ZIP archive.
+  - **Privacy-First:** All processing happens locally - no cloud dependencies.
+  - **Fast Processing:** Efficient batch processing with progress tracking.
 
----
+-----
 
-## 📋 Prerequisites
+## 🚀 Prerequisites
+
 Before running this application, ensure you have:
-- **Python 3.8+** installed on your system.
-- **Ollama** installed and running locally.
-- **Llama 3** model downloaded via Ollama.
 
----
+  - **Python 3.8+** installed on your system.
+  - **Ollama** installed and running locally.
+  - **Llama 3 model** downloaded via Ollama.
 
-## ⚡ Installing Ollama
-Visit **[Ollama’s official website](https://ollama.ai)** and follow the installation instructions for your OS.
+### Installing Ollama
 
-After installing, download the Llama 3 model:
+Visit [Ollama's official website](https://ollama.com/) and follow the installation instructions for your operating system.
+
+### Setting up Llama 3
+
+After installing Ollama, download the Llama 3 model:
+
 ```bash
 ollama pull llama3
+```
+
 Start the Ollama server:
 
-bash
-Copy
-Edit
+```bash
 ollama serve
-📥 Installation
+```
+
+-----
+
+## 📥 Installation
+
 Clone the repository:
 
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/ai-ts-js-converter.git
 cd ai-ts-js-converter
+```
+
 Create a virtual environment (recommended):
 
-bash
-Copy
-Edit
+```bash
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate # On Windows: venv\Scripts\activate
+```
+
 Install dependencies:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
-🚀 Usage
-Start the Ollama server (if not already running):
+```
 
-bash
-Copy
-Edit
-ollama serve
-Run the Streamlit application:
+-----
 
-bash
-Copy
-Edit
-streamlit run app.py
-Open your browser and go to:
+## 💻 Usage
 
-arduino
-Copy
-Edit
-http://localhost:8501
-🖥 How to Use
-Convert Multiple Files (Batch Mode)
-Go to the "Convert Folder" tab.
+1.  Start the Ollama server (if not already running):
+    ```bash
+    ollama serve
+    ```
+2.  Run the Streamlit application:
+    ```bash
+    streamlit run app.py
+    ```
+3.  Open your browser and navigate to `http://localhost:8501`.
 
-Click "Browse files" and select .ts or .tsx files.
+-----
 
-Click "Convert Files to JavaScript".
+### How to Use
 
-Watch the progress bar.
+#### Convert Multiple Files (Batch Mode)
 
-Download the converted files as a ZIP archive.
+1.  Navigate to the "Convert Folder" tab.
+2.  Click "Browse files" and select your `.ts` or `.tsx` files.
+3.  Click "Convert Files to JavaScript."
+4.  Monitor the progress bar during conversion.
+5.  Download the converted files as a ZIP archive.
 
-Convert Single Snippet
-Go to the "Convert Single Snippet" tab.
+#### Convert Single Snippet
 
-Paste your TypeScript code in the left panel.
+1.  Navigate to the "Convert Single Snippet" tab.
+2.  Paste your TypeScript code in the left panel.
+3.  Click "Convert Snippet."
+4.  View the converted JavaScript code in the right panel.
 
-Click "Convert Snippet".
+-----
 
-View the converted JavaScript code in the right panel.
+## 📁 Project Structure
 
-📁 Project Structure
-bash
-Copy
-Edit
+```
 ai-ts-js-converter/
 ├── app.py              # Main Streamlit application
 ├── requirements.txt    # Python dependencies
 ├── README.md           # Project documentation
 └── assets/             # Static assets (if any)
-📦 Dependencies
-streamlit – Web application framework.
+```
 
-requests – HTTP library for Ollama API calls.
+### Dependencies
 
-zipfile – ZIP file creation and handling.
+  - `streamlit` - Web application framework
+  - `requests` - HTTP library for Ollama API calls
+  - `zipfile` - ZIP file creation and handling
+  - `json` - JSON parsing and manipulation
+  - `io` - Input/output operations
 
-json – JSON parsing and manipulation.
+-----
 
-io – Input/output operations.
+## 🎨 UI Features
 
-🎨 UI Features
-Glassmorphism effects with subtle transparency and blur.
+The application features a premium dark theme with:
 
-Gradient text headers with shimmer effects.
+  - Glassmorphism effects with subtle transparency and blur.
+  - Gradient text headers with shimmer effects.
+  - Interactive buttons with hover animations and glow effects.
+  - Smooth transitions and micro-interactions.
+  - Responsive design that works on all screen sizes.
+  - Custom scrollbars matching the dark theme.
 
-Interactive buttons with hover animations & glow.
+-----
 
-Smooth transitions and micro-interactions.
+## ⚙️ Configuration
 
-Responsive design for all screen sizes.
+### Ollama API Settings
 
-Custom scrollbars matching the dark theme.
+The application connects to Ollama at `http://localhost:11434` by default. To modify the connection settings, update the `ollama_api_url` variable in `app.py`:
 
-⚙️ Configuration
-Ollama API Settings
-The app connects to Ollama at:
-
-python
-Copy
-Edit
+```python
 ollama_api_url = "http://localhost:11434/api/generate"
-Modify in app.py if needed.
+```
 
-Model Configuration
-Uses llama3 by default.
-Change in call_ollama function:
+### Model Configuration
 
-python
-Copy
-Edit
+The app uses the `llama3` model by default. To use a different model, modify the payload in the `call_ollama` function:
+
+```python
 payload = {
     "model": "your-model-name",  # Change this
     "prompt": prompt,
     "stream": False,
 }
-🤝 Contributing
-Contributions are welcome!
+```
 
-Fork the repository.
+-----
 
-Create a branch:
+## 🤝 Contributing
 
-bash
-Copy
-Edit
-git checkout -b feature/amazing-feature
-Make changes and commit:
+Contributions are welcome\! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-bash
-Copy
-Edit
-git commit -m "Add some amazing feature"
-Push:
+### Development Setup
 
-bash
-Copy
-Edit
-git push origin feature/amazing-feature
-Open a Pull Request.
+1.  Fork the repository.
+2.  Create a feature branch (`git checkout -b feature/amazing-feature`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some amazing feature'`).
+5.  Push to the branch (`git push origin feature/amazing-feature`).
+6.  Open a Pull Request.
 
-🛠 Troubleshooting
-"Error connecting to Ollama"
-Ensure Ollama is installed and running:
+-----
 
-bash
-Copy
-Edit
-ollama serve
-Check Llama 3 is downloaded:
+## 🐛 Troubleshooting
 
-bash
-Copy
-Edit
-ollama list
-Verify API URL is correct (default: http://localhost:11434).
+### Common Issues
 
-"Failed to decode JSON from Ollama response"
-Restart Ollama server.
+  - **"Error connecting to Ollama"**
 
-Use a compatible model.
+      - Ensure Ollama is installed and running (`ollama serve`).
+      - Check if the Llama 3 model is downloaded (`ollama list`).
+      - Verify the API URL is correct (default: `http://localhost:11434`).
 
-Files not converting properly
-Ensure uploaded files are valid .ts or .tsx.
+  - **"Failed to decode JSON from Ollama response"**
 
-Check TypeScript syntax.
+      - This may indicate an issue with the Ollama model.
+      - Try restarting the Ollama server.
+      - Ensure you're using a compatible model.
 
-Large files may take longer.
+  - **Files not converting properly**
 
-🔮 Future Enhancements
-Support for additional file types (.d.ts, .vue, etc.).
+      - Make sure uploaded files are valid TypeScript (`.ts` or `.tsx`).
+      - Check that the files contain valid TypeScript syntax.
+      - Large files may take longer to process.
 
-Custom conversion rules and preferences.
+-----
 
-Real-time preview during batch conversion.
+## 🔮 Future Enhancements
 
-Integration with other AI models (GPT-4, Claude, etc.).
+  - Support for additional file types (`.d.ts`, `.vue`, etc.).
+  - Custom conversion rules and preferences.
+  - Real-time preview during batch conversion.
+  - Integration with other AI models (GPT-4, Claude, etc.).
+  - Syntax highlighting in code preview areas.
+  - Export options (individual files, different formats).
+  - Conversion history and session management.
 
-Syntax highlighting in preview.
+-----
 
-Export options in multiple formats.
+## ❓ Support
 
-Conversion history and session management.
+If you encounter any issues or have questions:
 
-❤️ Acknowledgments
-Streamlit – Web framework.
+  - Check the [Issues page](https://www.google.com/search?q=https://github.com/yourusername/ai-ts-js-converter/issues).
+  - Create a new issue with detailed information about your problem.
+  - Include your system information and error messages.
 
-Ollama – Local AI model serving.
+-----
 
-Meta – Llama 3 model.
+## 🙏 Acknowledgments
 
-Open-source community – Inspiration & resources.
+  - **Streamlit** for the amazing web framework.
+  - **Ollama** for local AI model serving.
+  - **Meta** for the Llama 3 model.
+  - The open-source community for inspiration and resources.
 
-⭐ Star this repo if you found it helpful!
+Made with ❤️ and powered by AI
+
+⭐ **Star this repo if you found it helpful\!**
